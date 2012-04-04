@@ -44,3 +44,17 @@
   (when (not (package-installed-p p))
     (package-install p)))
 )
+
+
+
+;; Rainbox delimiters
+(require 'rainbow-delimiters)
+(global-rainbow-delimiters-mode)
+
+
+;; Auto complete
+(require 'auto-complete)
+(global-auto-complete-mode t)
+
+
+

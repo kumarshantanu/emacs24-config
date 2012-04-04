@@ -42,11 +42,6 @@
 (global-set-key (kbd "<f7>") 'toggle-line-spacing)
 
 
-;; Rainbox delimiters
-(require 'rainbow-delimiters)
-(global-rainbow-delimiters-mode)
-
-
 (defun set-frame-size-according-to-resolution ()
   (interactive)
   (if window-system
@@ -193,11 +188,6 @@
 (autoload 'project-mode "project-mode" "Project Mode" t)
 (project-load-all)
 (project-mode 1)
-
-
-;; Auto complete
-(require 'auto-complete)
-(global-auto-complete-mode t)
 
 
 ;; nav - http://code.google.com/p/emacs-nav/
