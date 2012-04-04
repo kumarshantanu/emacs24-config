@@ -14,7 +14,8 @@
                 starter-kit-js starter-kit-ruby
                 ;; Clojure stuff
                 clojure-mode clojure-test-mode clojurescript-mode
-                slime slime-repl slime-fuzzy clojure-project-mode
+                slime slime-repl clojure-project-mode
+                ;; slime-fuzzy -- screws up slime-repl, don't install
                 ;; Auto complete
                 auto-complete ac-slime
                 ;; Fuzzy match
@@ -25,7 +26,7 @@
                 ;; Eye-candy
                 highlight-parentheses highline col-highlight crosshairs vline
                 highlight-symbol hl-sexp idle-highlight
-                rainbow-delimiters rainbow-mode
+                rainbow-delimiters
                 maxframe
                 ;; Text mate
                 textmate
