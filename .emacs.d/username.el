@@ -191,6 +191,6 @@
 
 
 ;; nav - http://code.google.com/p/emacs-nav/
-;; Comment out the lines below if you don't have these available locally
-(add-to-list 'load-path "~/.emacs.shantanu.d/emacs-nav-20110220")
-(require 'nav)
+;; Uncomment lines below as needed
+;(add-to-list 'load-path "~/.emacs.shantanu.d/emacs-nav-20110220")
+;(require 'nav)
