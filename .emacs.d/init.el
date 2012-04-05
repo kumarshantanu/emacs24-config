@@ -28,6 +28,7 @@
                 highlight-symbol hl-sexp idle-highlight
                 rainbow-delimiters
                 maxframe
+                fill-column-indicator
                 ;; Text mate
                 textmate
                 ;; regex match
@@ -47,7 +48,7 @@
 
 
 
-;; Rainbox delimiters
+;; Rainbow delimiters
 (require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode)
 
@@ -57,4 +58,10 @@
 (global-auto-complete-mode t)
 
 
-
+;; Right margin - http://www.emacswiki.org/emacs/FillColumnIndicator
+(require 'fill-column-indicator)
+(setq fci-style 'shading)            ; 'shading (default) or 'rule
+(add-hook 'find-file-hook 'fci-mode) ; or (add-hook 'c-mode-hook 'fci-mode) for C files
+(setq fci-rule-width 2)              ; Value can be 1 to 6
+(setq fci-rule-color "blue")         ; gray (default) or darkblue or whatever
+(setq-default fill-column 80)
