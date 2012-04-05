@@ -55,10 +55,10 @@
       (add-to-list 'default-frame-alist (cons 'width 220)))
       ;; Large displays
       ((>= (x-display-pixel-width) 1280)
-      (add-to-list 'default-frame-alist (cons 'width 180)))
+      (add-to-list 'default-frame-alist (cons 'width 170)))
       ;; Default/small displays
       (t
-      (add-to-list 'default-frame-alist (cons 'width 90))))
+      (add-to-list 'default-frame-alist (cons 'width 80))))
 ;;    (if (> (x-display-pixel-width) 1280)
 ;;           (add-to-list 'default-frame-alist (cons 'width 200)) ; orig 120
 ;;           (add-to-list 'default-frame-alist (cons 'width 90))) ; orig 80
