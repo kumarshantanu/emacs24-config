@@ -191,6 +191,20 @@
 (project-mode 1)
 
 
+;; Desktop-mode + Project-mode integration (tabs are auto-saved/restored)
+;; adapted - http://code.google.com/p/ergoemacs/source/browse/trunk/ergoemacs/init_settings.el
+;; adapted - http://stackoverflow.com/questions/10795988/emacs-desktop-save-mode-startup-error
+(defun my-project-open ()
+  (interactive)
+  (project-open)
+  (when (project-current)
+    (desktop-save-mode 1)
+    (setq desktop-save t)
+    (setq desktop-load-locked-desktop t)
+    (desktop-read)))
+(global-set-key (kbd "s-r") 'my-project-open)  ;; open project with Cmd-r
+
+
 ;; nav - http://code.google.com/p/emacs-nav/
 ;; Uncomment lines below as needed
 ;(add-to-list 'load-path "~/.emacs.shantanu.d/emacs-nav-20110220")
