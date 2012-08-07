@@ -55,8 +55,11 @@
       ((>= (x-display-pixel-width) 1920)
       (add-to-list 'default-frame-alist (cons 'width 220)))
       ;; Large displays
-      ((>= (x-display-pixel-width) 1280)
+      ((>= (x-display-pixel-width) 1400)
       (add-to-list 'default-frame-alist (cons 'width 170)))
+      ;; Moderate displays
+      ((>= (x-display-pixel-width) 1280)
+      (add-to-list 'default-frame-alist (cons 'width 138)))
       ;; Default/small displays
       (t
       (add-to-list 'default-frame-alist (cons 'width 80))))
@@ -77,7 +80,8 @@
 ;; Font
 ;(set-default-font "-apple-courier-medium-r-normal--18-180-72-72-m-180-mac-roman")
 ;(set-default-font "-apple-inconsolata-medium-r-normal--13-130-72-72-m-130-iso10646-1")
-(set-default-font "-apple-inconsolata-medium-r-normal--14-180-72-72-m-180-iso10646-1")
+;(set-default-font "-apple-inconsolata-medium-r-normal--14-180-72-72-m-180-iso10646-1")
+(set-face-attribute 'default nil :family "Inconsolata" :height 110)
 
 
 ;; Fuzzy match
