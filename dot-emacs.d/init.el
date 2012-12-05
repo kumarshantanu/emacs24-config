@@ -16,6 +16,7 @@
                 clojure-mode clojure-test-mode clojurescript-mode
                 slime slime-repl clojure-project-mode
                 ;; slime-fuzzy -- screws up slime-repl, don't install
+                nrepl ac-nrepl nrepl-ritz
                 ;; Auto complete
                 auto-complete ac-slime
                 ;; Fuzzy match
