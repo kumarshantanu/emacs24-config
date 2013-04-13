@@ -93,7 +93,7 @@
 
 ;; Popup (dependency for auto-complete)
 ;(add-to-list 'load-path "~/.emacs.d/elpa/popup-0.5")
-;(require 'popup)
+(require 'popup)
 
 ;; Auto-complete setup for Clojure
 ;; See here: http://sebastianlab.com/post/2409175090/autocomplete-in-clojure
@@ -101,31 +101,31 @@
 
 ;; Auto complete
 ;(add-to-list 'ac-dictionary-directories "~/.emacs.d//acdict")
-;(require 'auto-complete-config)
-;(ac-config-default)
-;(global-auto-complete-mode t)
-;(auto-complete-mode 1)
+(require 'auto-complete-config)
+(ac-config-default)
+(global-auto-complete-mode t)
+(auto-complete-mode 1)
 
 
 ;; nREPL auto complete
 ;(add-to-list 'load-path "~/.emacs.d/elpa/ac-nrepl-0.17")
-;(require 'ac-nrepl)
-;(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
-;(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
-;(eval-after-load "auto-complete"
-;                 '(add-to-list 'ac-modes 'nrepl-mode))
-;(defun set-auto-complete-at-point-function ()
-;  (setq completion-at-point-functions '(auto-complete)))
+(require 'ac-nrepl)
+(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
+(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
+(eval-after-load "auto-complete"
+                 '(add-to-list 'ac-modes 'nrepl-mode))
+(defun set-auto-complete-at-point-function ()
+  (setq completion-at-point-functions '(auto-complete)))
 ;(add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
-;(add-hook 'nrepl-mode-hook 'set-auto-complete-as-completion-at-point-function)
-;(add-hook 'nrepl-interaction-mode-hook 'set-auto-complete-as-completion-at-point-function)
-;(define-key nrepl-interaction-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
+(add-hook 'nrepl-mode-hook 'set-auto-complete-as-completion-at-point-function)
+(add-hook 'nrepl-interaction-mode-hook 'set-auto-complete-as-completion-at-point-function)
+(define-key nrepl-interaction-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
 
 
 ;; Slime auto complete
 ;(setq load-paths (cons "~/.emacs.d/ac-slime" load-path))
-;(require 'ac-slime)
-;(add-hook 'slime-mode-hook 'set-up-slime-ac)
+(require 'ac-slime)
+(add-hook 'slime-mode-hook 'set-up-slime-ac)
 
 
 ;; Fuzzy match
