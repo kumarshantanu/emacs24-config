@@ -116,6 +116,8 @@
 (setq ac-use-quick-help t)
 (setq ac-quick-help-delay 1)
 (setq ac-ignore-case 'smart)
+(setq ac-set-trigger-key "TAB")
+(setq ac-auto-start t) ; t (always) or nil (never) or number (min chars)
 
 
 ;; nREPL auto complete
