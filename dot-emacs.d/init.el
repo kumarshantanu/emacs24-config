@@ -13,15 +13,13 @@
   '(starter-kit starter-kit-lisp starter-kit-bindings
                 starter-kit-js starter-kit-ruby
                 ;; Auto complete
-                popup auto-complete
+                popup pos-tip auto-complete
                 ;; Clojure stuff
                 clojure-mode clojure-test-mode clojurescript-mode
                 slime slime-repl clojure-project-mode
                 nrepl ac-nrepl nrepl-ritz
                 slime slime-repl ac-slime
                 ;; slime-fuzzy -- screws up slime-repl, don't install
-                ;; Auto complete
-                auto-complete ac-slime
                 ;; Fuzzy match
                 fuzzy fuzzy-match
                 ;; ido-better-flex -- screws up textmate, don't install

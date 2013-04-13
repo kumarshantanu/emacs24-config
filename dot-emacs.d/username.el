@@ -91,9 +91,10 @@
 ;; (add-to-list 'load-path "~/.emacs.d/elpa/foo-0.1")
 
 
-;; Popup (dependency for auto-complete)
+;; Popup and pos-tip (dependencies for auto-complete)
 ;(add-to-list 'load-path "~/.emacs.d/elpa/popup-0.5")
 (require 'popup)
+(require 'pos-tip)
 
 ;; Auto-complete setup for Clojure
 ;; See here: http://sebastianlab.com/post/2409175090/autocomplete-in-clojure
@@ -102,9 +103,18 @@
 ;; Auto complete
 ;(add-to-list 'ac-dictionary-directories "~/.emacs.d//acdict")
 (require 'auto-complete-config)
+;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+;(setq 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
 (global-auto-complete-mode t)
-(auto-complete-mode 1)
+(define-globalized-minor-mode
+  real-global-auto-complete-mode
+  auto-complete-mode (lambda () (if (not (minibufferp (current-buffer)))
+                                  (auto-complete-mode 1))))
+(real-global-auto-complete-mode t)
+(setq ac-use-quick-help t)
+(setq ac-quick-help-delay 1)
+(setq ac-ignore-case 'smart)
 
 
 ;; nREPL auto complete
