@@ -1,3 +1,4 @@
+(setq debug-on-error t)
 
 ;; Menu bar and Tool bar, Line number display
 (tool-bar-mode 0)
@@ -124,9 +125,9 @@
 (add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
 (eval-after-load "auto-complete"
                  '(add-to-list 'ac-modes 'nrepl-mode))
-(defun set-auto-complete-at-point-function ()
+(defun set-auto-complete-as-completion-at-point-function ()
   (setq completion-at-point-functions '(auto-complete)))
-;(add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
+(add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (add-hook 'nrepl-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (add-hook 'nrepl-interaction-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (define-key nrepl-interaction-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
@@ -139,6 +140,7 @@
 (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
 (eval-after-load "auto-complete"
                  '(add-to-list 'ac-modes 'slime-repl-mode))
+
 
 ;; Fuzzy match
 ;(add-to-list 'load-path "~/.emacs.d/elpa/fuzzy-match-1.4")
