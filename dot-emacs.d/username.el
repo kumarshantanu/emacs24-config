@@ -126,7 +126,9 @@
 ;(setq load-paths (cons "~/.emacs.d/ac-slime" load-path))
 (require 'ac-slime)
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
-
+(add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
+(eval-after-load "auto-complete"
+                 '(add-to-list 'ac-modes 'slime-repl-mode))
 
 ;; Fuzzy match
 ;(add-to-list 'load-path "~/.emacs.d/elpa/fuzzy-match-1.4")
