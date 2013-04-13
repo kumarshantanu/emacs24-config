@@ -168,7 +168,7 @@
  
 (ido-everywhere 1)
 
-;; M-space should remove multiple whitespace lines into a single blank
+;; C-M-space should remove multiple whitespace lines into a single blank
 ;; character
 (defun multi-line-just-one-space (&optional n)
   "Multi-line version of just-one-space: Delete all
@@ -263,7 +263,10 @@
 (global-set-key (kbd "s-j") 'my-project-open)  ;; open project with Cmd-j
 
 ;; Load a default theme
-(load-theme 'zenburn t)
+;(load-theme 'zenburn t)
+;(load-theme 'sloarized t)
+;(load-theme 'solarized-light t)
+;(load-theme 'solarized-dark t)
 
 ;; nav - http://code.google.com/p/emacs-nav/
 ;; Uncomment lines below as needed
