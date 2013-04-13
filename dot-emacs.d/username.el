@@ -1,6 +1,6 @@
 
 ;; Menu bar and Tool bar, Line number display
-(tool-bar-mode 1)
+(tool-bar-mode 0)
 (menu-bar-mode 1)
 ;(setq linum-format "  %d ")
 (global-linum-mode 1)
@@ -81,11 +81,55 @@
 ;(set-default-font "-apple-courier-medium-r-normal--18-180-72-72-m-180-mac-roman")
 ;(set-default-font "-apple-inconsolata-medium-r-normal--13-130-72-72-m-130-iso10646-1")
 ;(set-default-font "-apple-inconsolata-medium-r-normal--14-180-72-72-m-180-iso10646-1")
-(set-face-attribute 'default nil :family "Inconsolata" :height 110)
+(set-face-attribute 'default nil :family "Inconsolata" :height 100)
+
+
+;; Load files - http://emacswiki.org/emacs/LoadPath
+(let ((default-directory "~/.emacs.d/elpa/"))
+  (normal-top-level-add-subdirs-to-load-path))
+;; so that we don't have to mention individually the following style
+;; (add-to-list 'load-path "~/.emacs.d/elpa/foo-0.1")
+
+
+;; Popup (dependency for auto-complete)
+;(add-to-list 'load-path "~/.emacs.d/elpa/popup-0.5")
+;(require 'popup)
+
+;; Auto-complete setup for Clojure
+;; See here: http://sebastianlab.com/post/2409175090/autocomplete-in-clojure
+;; And here: https://github.com/purcell/ac-nrepl
+
+;; Auto complete
+;(add-to-list 'ac-dictionary-directories "~/.emacs.d//acdict")
+;(require 'auto-complete-config)
+;(ac-config-default)
+;(global-auto-complete-mode t)
+;(auto-complete-mode 1)
+
+
+;; nREPL auto complete
+;(add-to-list 'load-path "~/.emacs.d/elpa/ac-nrepl-0.17")
+;(require 'ac-nrepl)
+;(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
+;(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
+;(eval-after-load "auto-complete"
+;                 '(add-to-list 'ac-modes 'nrepl-mode))
+;(defun set-auto-complete-at-point-function ()
+;  (setq completion-at-point-functions '(auto-complete)))
+;(add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
+;(add-hook 'nrepl-mode-hook 'set-auto-complete-as-completion-at-point-function)
+;(add-hook 'nrepl-interaction-mode-hook 'set-auto-complete-as-completion-at-point-function)
+;(define-key nrepl-interaction-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
+
+
+;; Slime auto complete
+;(setq load-paths (cons "~/.emacs.d/ac-slime" load-path))
+;(require 'ac-slime)
+;(add-hook 'slime-mode-hook 'set-up-slime-ac)
 
 
 ;; Fuzzy match
-(add-to-list 'load-path "~/.emacs.d/elpa/fuzzy-match-1.4")
+;(add-to-list 'load-path "~/.emacs.d/elpa/fuzzy-match-1.4")
 (require 'fuzzy-match)
 
 
@@ -141,7 +185,15 @@
      (progn
        (skip-chars-forward " \t\n")
        (constrain-to-field nil orig-pos t)))))
-(global-set-key (kbd "M-SPC") 'multi-line-just-one-space)
+(global-set-key (kbd "C-M-SPC") 'multi-line-just-one-space)
+
+
+;; multiple-cursors
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 
 ;; Buffer tabs (tabbar)
@@ -180,15 +232,15 @@
 
 ;; Textmate-mode is a minor mode, must be enabled
 ;(add-to-list 'load-path "~/.emacs.shantanu.d/textmate.el")
-(add-to-list 'load-path "~/.emacs.d/textmate-4")
+;(add-to-list 'load-path "~/.emacs.d/textmate-4")
 (require 'textmate)
 (textmate-mode)
 
 
 ;; Project mode
-(add-to-list 'load-path "~/.emacs.d/elpa/levenshtein-1.0")
+;(add-to-list 'load-path "~/.emacs.d/elpa/levenshtein-1.0")
 (require 'levenshtein)
-(add-to-list 'load-path "~/.emacs.d/elpa/project-mode-1.0")
+;(add-to-list 'load-path "~/.emacs.d/elpa/project-mode-1.0")
 (require 'project-mode)
 (autoload 'project-mode "project-mode" "Project Mode" t)
 (project-load-all)
@@ -206,10 +258,19 @@
     (setq desktop-save t)
     (setq desktop-load-locked-desktop t)
     (desktop-read)))
-(global-set-key (kbd "s-r") 'my-project-open)  ;; open project with Cmd-r
+(global-set-key (kbd "s-j") 'my-project-open)  ;; open project with Cmd-j
 
+;; Load a default theme
+(load-theme 'zenburn t)
 
 ;; nav - http://code.google.com/p/emacs-nav/
 ;; Uncomment lines below as needed
 ;(add-to-list 'load-path "~/.emacs.shantanu.d/emacs-nav-20110220")
 ;(require 'nav)
+
+;(add-to-list 'load-path "~/.emacs.d/installed")
+;(require 'tree-mode)
+;(require 'desktop)
+;(add-to-list 'desktop-globals-to-save 'windata-named-winconf)
+;(require 'dirtree)
+;(autoload 'dirtree "dirtree" "Add directory to tree view")
