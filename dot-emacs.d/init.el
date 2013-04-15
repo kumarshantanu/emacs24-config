@@ -45,6 +45,9 @@
                 zenburn-theme solarized-theme)
   "A list of packages to ensure are installed at launch.")
 
+;; load extra packages
+(load-file (concat root-dir "packages.el"))
+
 (require 'cl)
 
 (dolist (p my-packages)
