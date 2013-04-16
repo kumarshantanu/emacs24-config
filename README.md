@@ -18,7 +18,7 @@ My Emacs 24 config files for Clojure and Ruby stuff.
 
    ```bash
    $ cd emacs24-config
-   $ ln -s `pwd`/dot-emacs.d/username.el ~/.emacs.d/{USER}.el
+   $ ln -s `pwd`/dot-emacs.d/username.el ~/.emacs.d/${USER}.el
    ```
 
 5. Start Emacs again to see effect
