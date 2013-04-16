@@ -25,6 +25,6 @@ My Emacs 24 config files for Clojure and Ruby stuff.
 
 *Upgrade*
 
-1. Remove all files/folders except `init.el` and `username.el`
+1. Remove all files/folders except `init.el`, `packages.el` and `username.el`
 2. Follow the steps isted in *First Time Install*
 
