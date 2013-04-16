@@ -287,9 +287,21 @@
 ;(add-to-list 'load-path "~/.emacs.shantanu.d/emacs-nav-20110220")
 ;(require 'nav)
 
+(add-to-list 'load-path "~/.emacs.d/el-get/tree-mode/")
+(add-to-list 'load-path "~/.emacs.d/el-get/windata/")
+(add-to-list 'load-path "~/.emacs.d/el-get/dirtree/")
+
 ;(add-to-list 'load-path "~/.emacs.d/installed")
-;(require 'tree-mode)
-;(require 'desktop)
-;(add-to-list 'desktop-globals-to-save 'windata-named-winconf)
-;(require 'dirtree)
-;(autoload 'dirtree "dirtree" "Add directory to tree view")
+(require 'tree-mode)
+(require 'desktop)
+(add-to-list 'desktop-globals-to-save 'windata-named-winconf)
+(require 'dirtree)
+(autoload 'dirtree "dirtree" "Add directory to tree view")
+
+(defun my-project-dirtree ()
+  (interactive)
+  (if (project-current)
+    (dirtree (project-default-directory (project-current)) t)
+    (dirtree-show)))
+(global-set-key (kbd "s-i") 'my-project-dirtree)  ;; open project dirtree with Cmd-i
+

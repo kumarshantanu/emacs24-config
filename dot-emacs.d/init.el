@@ -45,14 +45,18 @@
                 zenburn-theme solarized-theme)
   "A list of packages to ensure are installed at launch.")
 
-;; load extra packages
-(load-file (concat root-dir "packages.el"))
-
 (require 'cl)
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+;; no path hard-coding plz
+(defvar root-dir (file-name-directory load-file-name))
+(when (not (file-exists-p (concat root-dir "el-get")))
+  ;; load extra packages
+  (load-file (concat root-dir "packages.el")))
+
 )
 
 
