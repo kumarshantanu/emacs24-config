@@ -158,6 +158,7 @@
             (define-key css-mode-map "\M-\C-x" 'slime-js-refresh-css)
             (define-key css-mode-map "\C-c\C-r" 'slime-js-embed-css)))
 
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; Fuzzy match
 ;(add-to-list 'load-path "~/.emacs.d/elpa/fuzzy-match-1.4")
