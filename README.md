@@ -1,7 +1,9 @@
 
 My Emacs 24 config files for Clojure and Ruby stuff.
 
-*First Time Install*
+## Installation
+
+### First Time Install
 
 1. Create a softlink to the `dot-emacs.d` directory in `~/.emacs.d`
 
@@ -23,8 +25,13 @@ My Emacs 24 config files for Clojure and Ruby stuff.
 
 5. Start Emacs again to see effect
 
-*Upgrade*
+### Upgrade
 
 1. Remove all files/folders except `init.el`, `packages.el` and `username.el`
 2. Follow the steps isted in *First Time Install*
+
+## Usage
+
+* Press `Super-j` (Cmd+j on Mac, Win+j on PC) to open a project
+* Press `Super-i` (Cmd+i on Mac, Win+i on PC) to open Dirtree (file explorer)
 
