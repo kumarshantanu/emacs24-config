@@ -39,8 +39,8 @@ first. Then, install the following (find external linters with `C-c ! ?`):
 
 ### Upgrade
 
-1. Remove all files/folders except `init.el`, `packages.el` and `username.el`
-2. Follow the steps isted in *First Time Install*
+1. Remove all files/folders except `*.project`, `init.el`, `packages.el`, `setup-slime-js.el` and `username.el`
+2. Follow the steps listed in *First Time Install*
 
 ## Usage
 
