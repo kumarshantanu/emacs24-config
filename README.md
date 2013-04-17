@@ -32,7 +32,6 @@ than what `apt-get` gives.)
 
 7. To enable flycheck, you may need Node.js (see #6) as a common dependency
 first. Then, install the following (find external linters with `C-c ! ?`):
-
    * JSHint http://jshint.com/install/ (`sudo npm install -g jshint`)
    * HTML-Tidy https://github.com/w3c/tidy-html5 (Ubuntu: `apt-get install tidy`)
    * CSSLint https://github.com/stubbornella/csslint (`sudo npm install -g csslint`)
@@ -47,6 +46,9 @@ first. Then, install the following (find external linters with `C-c ! ?`):
 
 * Press `Super-j` (Cmd+j on Mac, Win+j on PC) to open a project
 * Press `Super-i` (Cmd+i on Mac, Win+i on PC) to open Dirtree (file explorer)
-* For CSS/JS web development, press `M-x slime-js-jack-in-node` then visit
-http://localhost:8009/swank-js/test.html in browser.
+* For CSS/JS web development, either run `M-x slime-js-jack-in-node` or
+(a) start webapp at port 3000, (b) start swank-js using `npm run swank`,
+(c) run `M-x slime-connect` . Then visit
+[http://localhost:8009/swank-js/test.html](http://localhost:8009/swank-js/test.html)
+in browser.
 
