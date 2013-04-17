@@ -47,8 +47,10 @@ first. Then, install the following (find external linters with `C-c ! ?`):
 * Press `Super-j` (Cmd+j on Mac, Win+j on PC) to open a project
 * Press `Super-i` (Cmd+i on Mac, Win+i on PC) to open Dirtree (file explorer)
 * For CSS/JS web development, either run `M-x slime-js-jack-in-node` or
-(a) start webapp at port 3000, (b) start swank-js using `npm run swank`,
-(c) run `M-x slime-connect` . Then visit
-[http://localhost:8009/swank-js/test.html](http://localhost:8009/swank-js/test.html)
-in browser.
+   * start webapp at port 3000
+   * start swank-js using `npm run swank`
+   * run `M-x slime-connect`
+   Then visit
+   [http://localhost:8009/swank-js/test.html](http://localhost:8009/swank-js/test.html)
+   in browser.
 
