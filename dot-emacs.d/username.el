@@ -144,6 +144,21 @@
                  '(add-to-list 'ac-modes 'slime-repl-mode))
 
 
+;; Slime (JS) setup
+;; See - https://github.com/swank-js/swank-js
+;; See - https://github.com/magnars/.emacs.d/blob/master/setup-slime-js.el
+(add-to-list 'load-path "~/.emacs.d")
+(add-hook 'after-init-hook
+          #'(lambda ()
+              (when (locate-library "slime-js")
+                (require 'setup-slime-js))))
+;; CSS
+(add-hook 'css-mode-hook
+          (lambda ()
+            (define-key css-mode-map "\M-\C-x" 'slime-js-refresh-css)
+            (define-key css-mode-map "\C-c\C-r" 'slime-js-embed-css)))
+
+
 ;; Fuzzy match
 ;(add-to-list 'load-path "~/.emacs.d/elpa/fuzzy-match-1.4")
 (require 'fuzzy-match)

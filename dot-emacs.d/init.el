@@ -19,6 +19,10 @@
                 slime slime-repl clojure-project-mode
                 nrepl ac-nrepl nrepl-ritz
                 slime slime-repl ac-slime
+                ;; JavaScript stuff
+                js2-mode json-mode slime-js
+                css-mode
+                flycheck
                 ;; slime-fuzzy -- screws up slime-repl, don't install
                 ;; Fuzzy match
                 fuzzy fuzzy-match
@@ -42,7 +46,9 @@
                 ;; Ruby stuff
                 ruby-end
                 ;; Color themes
-                zenburn-theme solarized-theme)
+                zenburn-theme solarized-theme
+		;; Undo tree
+		undo-tree)
   "A list of packages to ensure are installed at launch.")
 
 (require 'cl)

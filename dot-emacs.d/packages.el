@@ -38,8 +38,7 @@
         (:name yaml-mode
          :type git
          :url "https://github.com/yoshiki/yaml-mode.git"
-         :features yaml-mode)
-        ))
+         :features yaml-mode)))
 
 ;;
 ;; My Packages
