@@ -30,6 +30,14 @@ install [Node.js](nodejs.org) first. (Ubuntu folks should get a
 [newer version](https://launchpad.net/~chris-lea/+archive/node.js/)
 than what `apt-get` gives.)
 
+7. To enable flycheck, you may need Node.js (see #6) as a common dependency
+first. Then, install the following (find external linters with `C-c ! ?`):
+
+   * JSHint http://jshint.com/install/ (`sudo npm install -g jshint`)
+   * HTML-Tidy https://github.com/w3c/tidy-html5 (Ubuntu: `apt-get install tidy`)
+   * CSSLint https://github.com/stubbornella/csslint (`sudo npm install -g csslint`)
+
+
 ### Upgrade
 
 1. Remove all files/folders except `init.el`, `packages.el` and `username.el`
