@@ -50,6 +50,7 @@ first. Then, install the following (find external linters with `C-c ! ?`):
    * start webapp at port 3000
    * start swank-js using `npm run swank`
    * run `M-x slime-connect`
+
    Then visit
    [http://localhost:8009/swank-js/test.html](http://localhost:8009/swank-js/test.html)
    in browser.
