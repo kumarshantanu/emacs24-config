@@ -23,6 +23,8 @@
                 js2-mode json-mode slime-js
                 css-mode
                 flycheck
+                ;; Rust stuff
+                rust-mode
                 ;; slime-fuzzy -- screws up slime-repl, don't install
                 ;; Fuzzy match
                 fuzzy fuzzy-match
@@ -47,8 +49,8 @@
                 ruby-end
                 ;; Color themes
                 zenburn-theme solarized-theme
-		;; Undo tree
-		undo-tree)
+                ;; Undo tree
+                undo-tree)
   "A list of packages to ensure are installed at launch.")
 
 (require 'cl)
