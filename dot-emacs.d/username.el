@@ -19,6 +19,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 ;(setq scroll-step 1)
 (setq scroll-conservatively 101) ;; no jerky scrolling - http://j.mp/LQ1kyJ
+(setq visible-bell nil)  ; supress the annoying white square on OS X
 
 
 ; Make emacs faster (tip by Stuart Sierra)
