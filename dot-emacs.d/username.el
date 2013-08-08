@@ -17,8 +17,11 @@
 (setq next-line-add-newlines nil)
 (global-font-lock-mode 1)
 (fset 'yes-or-no-p 'y-or-n-p)
+
+;; Fix scrolling issues
 ;(setq scroll-step 1)
 (setq scroll-conservatively 101) ;; no jerky scrolling - http://j.mp/LQ1kyJ
+(setq scroll-preserve-screen-position t) ;; keep mouse pointer - http://j.mp/11PpL89
 
 
 ; Make emacs faster (tip by Stuart Sierra)
@@ -82,7 +85,7 @@
 ;(set-default-font "-apple-courier-medium-r-normal--18-180-72-72-m-180-mac-roman")
 ;(set-default-font "-apple-inconsolata-medium-r-normal--13-130-72-72-m-130-iso10646-1")
 ;(set-default-font "-apple-inconsolata-medium-r-normal--14-180-72-72-m-180-iso10646-1")
-(set-face-attribute 'default nil :family "Inconsolata" :height 100)
+(set-face-attribute 'default nil :family "Inconsolata" :height 110)
 
 
 ;; Load files - http://emacswiki.org/emacs/LoadPath
