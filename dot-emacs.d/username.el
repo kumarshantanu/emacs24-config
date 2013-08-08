@@ -22,6 +22,7 @@
 ;(setq scroll-step 1)
 (setq scroll-conservatively 101) ;; no jerky scrolling - http://j.mp/LQ1kyJ
 (setq scroll-preserve-screen-position t) ;; keep mouse pointer - http://j.mp/11PpL89
+(setq visible-bell nil)  ; supress the annoying white square on OS X
 
 
 ; Make emacs faster (tip by Stuart Sierra)
