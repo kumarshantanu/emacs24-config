@@ -101,6 +101,11 @@
 (require 'popup)
 (require 'pos-tip)
 
+
+;; Treat .cljx files as Clojure source (clojure-mode)
+(add-to-list 'auto-mode-alist '("\\.cljx\\'" . clojure-mode))
+
+
 ;; Auto-complete setup for Clojure
 ;; See here: http://sebastianlab.com/post/2409175090/autocomplete-in-clojure
 ;; And here: https://github.com/purcell/ac-nrepl
