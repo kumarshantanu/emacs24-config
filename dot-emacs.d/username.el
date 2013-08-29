@@ -86,7 +86,7 @@
 ;(set-default-font "-apple-courier-medium-r-normal--18-180-72-72-m-180-mac-roman")
 ;(set-default-font "-apple-inconsolata-medium-r-normal--13-130-72-72-m-130-iso10646-1")
 ;(set-default-font "-apple-inconsolata-medium-r-normal--14-180-72-72-m-180-iso10646-1")
-(set-face-attribute 'default nil :family "Inconsolata" :height 110)
+(set-face-attribute 'default nil :family "Inconsolata" :height 100)
 
 
 ;; Load files - http://emacswiki.org/emacs/LoadPath
