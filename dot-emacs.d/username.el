@@ -48,6 +48,11 @@
 (global-set-key (kbd "<f7>") 'toggle-line-spacing)
 
 
+;; Indentation
+;; Ignore normal indenting and provide a pure 2-space indenting no matter what
+(setq clojure-defun-style-default-indent t)
+
+
 (defun set-frame-size-according-to-resolution ()
   (interactive)
   (if window-system
